@@ -1,0 +1,13 @@
+{
+  "generator-ui5-app": {
+    "application": "project1",
+    "namespace": "com.project1",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.107.0",
+    "author": "Sudhanshu",
+    "initrepo": false,
+    "appId": "com.project1.project1",
+    "appURI": "com/project1/project1",
+    "setupCompleted": true
+  }
+}

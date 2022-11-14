@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="com.project1.project1.controller.covid.List"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="covid" showHeader="false">
+     <List
+		id="myList"
+		headerText="Latest Covid Data"
+		items="{
+			path: 'Latest>/data/regional'
+		}">
+		<items>
+			<StandardListItem
+				title="{Latest>loc}"
+				description="TotalConfirmed {Latest>totalConfirmed}"
+				info="Discharged {Latest>discharged}"
+				/>
+		</items>
+	</List>
+    </Page>
+</mvc:View>

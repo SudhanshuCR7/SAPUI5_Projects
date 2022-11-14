@@ -1,0 +1,130 @@
+{
+	"_version": "1.12.0",
+
+	"sap.app": {
+		"id": "com.project1.project1",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.project1.project1.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+
+		"dependencies": {
+			"minUI5Version": "1.107.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.ui.unified": {},
+				"sap.m": {}
+			}
+		},
+
+		"handleValidation": true,
+
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.project1.project1.i18n.i18n"
+				}
+			}
+		},
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.project1.project1.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "Tiles"
+				},
+				{
+					"pattern": "Tiles",
+					"name": "Tiles",
+					"target": "Tiles"	
+				},
+				{
+					"pattern": "first",
+					"name": "first",
+					"target": "Countdown"	
+				},
+				{
+					"pattern": "second",
+					"name": "second",
+					"target": "Covid"	
+				},
+				{
+					"pattern": "second-list",
+					"name": "second-list",
+					"target": "Covid-List"	
+				},
+				{
+					"pattern": "second-pie",
+					"name": "second-pie",
+					"target": "Covid-Pie"	
+				}
+			],
+			"targets": {
+				"main": {
+					"viewId": "main",
+					"viewName": "Main"
+				},
+				"Tiles":{
+					"viewId": "Tiles",
+					"viewName": "Tiles"
+				},
+				"Countdown":{
+					"viewId": "countdown.Countdown",
+					"viewName": "countdown.Countdown"
+				},
+				"Covid":{
+					"viewId": "covid.Covid",
+					"viewName": "covid.Covid"
+				},
+				"Covid-List":{
+					"viewId": "covid.List",
+					"viewName": "covid.List"
+				},
+				"Covid-Pie":{
+					"viewId": "covid.pie",
+					"viewName": "covid.pie"
+				}
+			}
+		}
+	}
+}
